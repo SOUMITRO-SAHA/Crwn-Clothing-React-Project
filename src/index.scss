@@ -1,0 +1,29 @@
+@font-face {
+  font-family: 'Open Sans Condensed';
+  font-weight: light;
+  src: url(./utils/fonts/OpenSans-CondLight.ttf);
+}
+
+@font-face {
+  font-family: 'Open Sans Condensed';
+  font-weight: Light Italic;
+  src: url(./utils/fonts/OpenSans-CondLightItalic.ttf);
+}
+
+@font-face {
+  font-family: 'Open Sans Condensed';
+  font-weight: bold;
+  src: url(./utils/fonts/OpenSans-CondBold.ttf);
+}
+
+body {
+  margin: 0;
+  font-family: 'Open Sans Condensed', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
