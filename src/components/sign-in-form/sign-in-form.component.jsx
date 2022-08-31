@@ -31,6 +31,7 @@ function SignInForm() {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
+      //eslint-disable-next-line
       const { user } = await signInAuthUserWithEmailAndPassword(
         email,
         password
