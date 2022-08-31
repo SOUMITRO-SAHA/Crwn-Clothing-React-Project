@@ -6,6 +6,7 @@ import {
 
 import FormInput from "../form-input/form-input.component";
 import Button from "../button/button.component";
+
 import "./sign-up.style.scss";
 
 const defaultFormFields = {
@@ -33,6 +34,8 @@ function SignUpForm() {
         email,
         password
       );
+
+      // Setting/Storing the User info on the db.
       await createUserDocumentFromAuth(user, { displayName });
       resetFormField();
     } catch (error) {

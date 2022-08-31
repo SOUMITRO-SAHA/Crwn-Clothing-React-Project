@@ -1,12 +1,12 @@
 import React, { useState } from "react";
+import Button from "../button/button.component";
+import FormInput from "../form-input/form-input.component";
+
 import {
   signInWithGooglePopup,
-  createUserDocumentFromAuth,
   signInAuthUserWithEmailAndPassword,
 } from "../../utils/firebase/firebase.utils";
 
-import FormInput from "../form-input/form-input.component";
-import Button from "../button/button.component";
 import "./sign-in.style.scss";
 
 const defaultFormFields = {
@@ -24,15 +24,19 @@ function SignInForm() {
 
   //User Log-In/ Sign-In Via Google Popup.
   const signInWithGoogle = async () => {
-    const { user } = await signInWithGooglePopup(); //Getting the user data.
-    await createUserDocumentFromAuth(user); //Creating doc in the db from User data.
+    await signInWithGooglePopup(); //Getting the user data.
   };
 
+  //This function is only going to run when Submit Button is being pressed :
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      const res = await signInAuthUserWithEmailAndPassword(email, password);
-      console.log(res);
+      const { user } = await signInAuthUserWithEmailAndPassword(
+        email,
+        password
+      );
+
+      // Resetting the Form fields to empty :
       resetFormField();
     } catch (error) {
       switch (error.code) {
