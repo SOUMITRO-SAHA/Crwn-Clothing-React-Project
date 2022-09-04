@@ -21,4 +21,10 @@ In a typical React application, data is passed top-down (parent to child) via pr
 
 [[more..]](src/contexts/context-note.md)
 
+## Uploading the Data to the FireStore :
+
+To Upload data on the FireStore is mainly done on back-end. For, learning propose we are performing this task in here.
+
+[[Learn More...]](./src/utils/firebase/uploading_data_on_fireStore.md)
+
 
