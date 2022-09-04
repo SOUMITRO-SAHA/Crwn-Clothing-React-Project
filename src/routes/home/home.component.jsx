@@ -1,15 +1,14 @@
-import React from 'react'
-import Directory from '../../components/Directory/Directory.component'
-import '../../components/Directory/Directory.style.scss'
-import {Outlet} from 'react-router-dom'
+import React from "react";
+import Directory from "../../components/Directory/Directory.component";
+import { Outlet } from "react-router-dom";
 
 function Home() {
   return (
-      <div>
-          <Directory />
-          <Outlet />
-    </div>
-  )
+    <>
+      <Directory />
+      <Outlet />
+    </>
+  );
 }
 
-export default Home
+export default Home;
