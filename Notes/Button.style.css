@@ -1,0 +1,28 @@
+button {
+    /* General Styling */
+    padding: 1em 1rem;
+    border-radius: 28px;
+
+    /* Color */
+    color: #fff;
+    background-color: #04aa6d;
+
+    /* Font */
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-shadow: 0 0 1px #fff;
+}
+
+button:hover,
+button:focus {
+    /* Color */
+    color: #22577a;
+    background-color: #80ed99;
+}
+
+button a:hover,
+button a:focus,
+button a {
+    text-decoration: none;
+    color: inherit;
+}
