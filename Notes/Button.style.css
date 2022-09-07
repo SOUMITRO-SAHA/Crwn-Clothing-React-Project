@@ -26,3 +26,10 @@ button a {
     text-decoration: none;
     color: inherit;
 }
+
+img,
+img.img {
+    display: block;
+    margin: 0 auto;
+    background-color: #fff;
+}

@@ -34,8 +34,6 @@ const INITIAL_STATE = {
 
 //Context Provider => It's the actual component.It will wrap around any other components that need access to the values inside.
 export const UserProvider = ({ children }) => {
-  // const [currentUser, setCurrentUser] = useState(null);
-  // const [state, dispatch] = useReducer(userReducer, INITIAL_STATE);
   const [{ currentUser }, dispatch] = useReducer(userReducer, INITIAL_STATE);
 
   const setCurrentUser = (user) => {
