@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import "./cart-dropdown-scrollbar.styles.scss";
+import "./cart-dropdown-scrollbar.styles.css";
 
 import {
   BaseButton,

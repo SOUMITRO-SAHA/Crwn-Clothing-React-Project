@@ -1,3 +1,4 @@
+import React from "react";
 // We have to import the createcontext from React before creating any context
 import { createContext, useState, useEffect } from "react";
 import { getCollectionsAndDocuments } from "../utils/firebase/firebase.utils.js";

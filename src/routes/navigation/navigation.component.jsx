@@ -1,4 +1,4 @@
-import { React, useContext } from "react";
+import React, { Fragment, useContext } from "react";
 import { Outlet } from "react-router-dom";
 import { ReactComponent as CrownLogo } from "../../assets/crown.svg";
 import CartDropdown from "../../components/cart-dropdown/cart-dropdown.component";
@@ -13,12 +13,12 @@ import {
   NavLink,
 } from "./navigation.style";
 
-function Navigation() {
+const Navigation = () => {
   const { currentUser } = useContext(UserContext);
   const { isCartOpen } = useContext(CartContext);
 
   return (
-    <>
+    <Fragment>
       <NavigationContainer>
         <LogoContainer to={"/"}>
           <CrownLogo />
@@ -40,8 +40,8 @@ function Navigation() {
         {isCartOpen && <CartDropdown />}
       </NavigationContainer>
       <Outlet />
-    </>
+    </Fragment>
   );
-}
+};
 
 export default Navigation;

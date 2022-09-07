@@ -1,4 +1,5 @@
 // eslint ES6
+import React from "react";
 import { createContext, useReducer } from "react";
 
 const addCartItem = (cartItems, productToAdd) => {
@@ -83,8 +84,10 @@ const cartReducer = (state, action) => {
 };
 
 export const CartProvider = ({ children }) => {
-  const [{ isCartOpen, cartItems, cartCount, cartTotal }, dispatch] =
-    useReducer(cartReducer, INITIAL_STATE);
+  const [
+    { isCartOpen, cartItems, cartCount, cartTotal },
+    dispatch,
+  ] = useReducer(cartReducer, INITIAL_STATE);
 
   // Updating the Cart Reducer :
   const updateCartItemReducer = (newCartItems) => {
