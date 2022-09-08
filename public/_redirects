@@ -1,2 +1,2 @@
 # Redirect rules for Netlify to redirect app to the home page.
-/*/index.html
+/index.html
